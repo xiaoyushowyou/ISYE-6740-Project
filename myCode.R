@@ -10,7 +10,7 @@ library(FNN)
 library(xgboost)
 
 #------------ Read and Filter ------------#
-fb <- fread("train6.csv", integer64 = "character")
+fb <- fread("train.csv", integer64 = "character")
 fb %>% filter(x >1, x <1.25, y >1, y < 1.25) -> fb1
 head(fb, 3)
 
@@ -33,6 +33,8 @@ plot_ly(data = fb2, x = fb2$x , y = fb2$y, z = fb2$accuracy, color = fb2$place_i
 s = 2
 l = 100
 w = 500
+
+#Divide train data and test data#
 fb_train <- fb1[1:22315, ]
 fb_test  <- fb1[22316:24795, ]
 

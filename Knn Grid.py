@@ -26,7 +26,7 @@ def prep_xy(x, y):
 
 def run_solution():
     print('Preparing data...')
-    f = open("../input/train.csv", "r")
+    f = open("../train.csv", "r")
     f.readline()
     total = 0
 
